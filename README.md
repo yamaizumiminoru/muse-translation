@@ -6,13 +6,14 @@ Kit ID: MUSE-ENJA-1.0.0 / entry: README.md
 
 Museは、チャットで依頼すると、添付ファイルを読んだり、結果をファイルにまとめたりできるAIアシスタントです。このキットでは、英語のPDFを日本語に翻訳します。
 
+0. **Museを使えるようにする**：[Muse](https://muse.ai/)を開き、必要ならログインまたはアカウントを作成します。新しいチャットを開けることを確認します。
 1. [Muse](https://muse.ai/)で新しいチャットを開き、翻訳したいPDFを添付します。
 2. 次の2行をコピーして送ります。
 
-```text
-https://github.com/yamaizumiminoru/muse-translation
-このURLに従って訳して
-```
+   ```text
+   https://github.com/yamaizumiminoru/muse-translation
+   このURLに従って訳して
+   ```
 
 3. GitHubへのアクセス許可が表示されたら、今回の作業だけ許可します。
 4. 翻訳が終わったら、添付された `translation.md` をダウンロードします。
