@@ -42,7 +42,7 @@ def reader_filename(manifest):
     if (not isinstance(name, str) or
             not re.fullmatch(r'[^<>:"/\\|?*\x00-\x1f\x7f]+\.pdf', name, re.I)):
         raise ValueError('source_filename must be the original PDF basename')
-    return name[:-4] + '日本語版.md'
+    return name[:-4] + '日本語訳.md'
 
 
 def check_page_sequence(wanted, markdown):
@@ -69,7 +69,7 @@ def validate_reader(manifest, markdown, path):
     expected = filter_reader(markdown).encode('utf-8')
     errors = check_page_sequence(expected_pages(manifest), read(path))
     if path.name != reader_filename(manifest):
-        errors.append('reader filename differs from the original PDF basename + 日本語版.md')
+        errors.append('reader filename differs from the original PDF basename + 日本語訳.md')
     if path.read_bytes() != expected:
         errors.append('reader bytes differ from QA draft with only unit-marker lines removed')
     return errors
